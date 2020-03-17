@@ -1,6 +1,6 @@
 {% set name = "qdatamatrix" %}
 {% set pypiname = "python-" + name %}
-{% set version = "0.1.22" %}
+{% set version = "0.1.23" %}
 
 package:
   name: {{ name|lower }}
@@ -8,25 +8,14 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz"
-  sha256: "efa00b89da6f313ed0d406f48391ff3f520ff6198f87ad271597d22c2cc604fa"
+  sha256: "d0462e0add90e1549ea6c562e6404cdc27310c098d861b525d379dcaee968a30"
 
 build:
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   number: 0
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-
   host:
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - xorg-libxfixes  # [linux]
     - pip
     - python
     - qtpy
