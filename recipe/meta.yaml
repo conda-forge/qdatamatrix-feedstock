@@ -1,18 +1,18 @@
 {% set name = "qdatamatrix" %}
 {% set pypiname = "python-" + name %}
-{% set version = "0.1.23" %}
+{% set version = "0.1.27" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz"
-  sha256: "d0462e0add90e1549ea6c562e6404cdc27310c098d861b525d379dcaee968a30"
+  url: https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
+  sha256: 524dc171b7da58215b0c3dfd9bd91de1c1d998590e4ba3b44df24bf8b1dcc9db
 
 build:
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
 
 requirements:
@@ -38,7 +38,7 @@ about:
   license: GPLv3
   license_family: GPL
   license_file: LICENSE
-  summary: 'A PyQt4/PyQt5 widget for viewing and editing a DataMatrix object.'
+  summary: A PyQt4/PyQt5 widget for viewing and editing a DataMatrix object.
   dev_url: https://github.com/smathot/python-qdatamatrix
 
 extra:
