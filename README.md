@@ -5,11 +5,11 @@ Home: https://github.com/smathot/python-qdatamatrix
 
 Package license: GPLv3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qdatamatrix-feedstock/blob/master/LICENSE.txt)
 
 Summary: A PyQt4/PyQt5 widget for viewing and editing a DataMatrix object.
 
-
+Development: https://github.com/smathot/python-qdatamatrix
 
 Current build status
 ====================
