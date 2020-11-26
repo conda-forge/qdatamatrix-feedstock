@@ -1,6 +1,6 @@
 {% set name = "qdatamatrix" %}
 {% set pypiname = "python-" + name %}
-{% set version = "0.1.27" %}
+{% set version = "0.1.29" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
-  sha256: 524dc171b7da58215b0c3dfd9bd91de1c1d998590e4ba3b44df24bf8b1dcc9db
+  sha256: 9724e52e75c53f65a49afa056c3a11222d8d7f42a85c20572d4df39407cf977d
 
 build:
   noarch: python
