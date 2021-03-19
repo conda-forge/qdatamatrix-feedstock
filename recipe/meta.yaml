@@ -18,13 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - qtpy
     - pyqt
     - datamatrix
 
   run:
-    - python
+    - python >=3.6
     - qtpy
     - pyqt
     - datamatrix
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/smathot/python-qdatamatrix
-  license: GPLv3
+  license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: A PyQt4/PyQt5 widget for viewing and editing a DataMatrix object.
