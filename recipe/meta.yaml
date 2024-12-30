@@ -7,29 +7,31 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ pypiname[0] }}/{{ pypiname }}/{{ pypiname }}-{{ version }}.tar.gz
   sha256: 547c370944967db4e046d1fcd8f3e6a4bf4db54b7548ae10c432195c513170da
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - qtpy
     - pyqt
     - datamatrix
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - qtpy
     - pyqt
     - datamatrix
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - qdatamatrix
 
